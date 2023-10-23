@@ -1,0 +1,23 @@
+﻿<Page x:Class="PassKeeperPages.Pages.SignIn"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PassKeeperPages.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="350"
+      Title="SignIn">
+
+    <Grid>
+        <StackPanel Background="#F0F0F0" Margin="0,0,0,0">
+            <Image Height="41" Width="212" Margin="0,127,0,0" Source="C:\Users\user\OneDrive\Desktop\Wpf_PassKeeper\Wpf_PassKeeper\Images\Screenshot 2023-10-11 165852.png"/>
+            <TextBox x:Name="textbox_name" Text="log in" Style="{DynamicResource SigIn_TextBox_style}" Margin="0,93,0,0"/>
+            <TextBox x:Name="textbox_password" Text="password" Style="{DynamicResource SigIn_TextBox_style}" Margin="0,15,0,0"/>
+            <Button Content="Sign in" Style="{DynamicResource button_style}" Height="60" Width="260" Margin="0,30,0,0" Click="Button_Click_1"/>
+            <Button Margin ="0,5,0,0" Background ="White"  BorderThickness="0" HorizontalContentAlignment="Center" Click ="forgotpassword_click">
+                <TextBlock Text="Forgot password? renew it!" TextDecorations="Underline"/>
+            </Button>
+            <Label  Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="16" Width="173" FontSize="12" BorderThickness="0,0,0,0"  Margin="0,134,0,18" Foreground="#000000" Content="a product by Product Design LLC" Background="#F0F0F0"  />
+        </StackPanel>
+    </Grid>
+</Page>

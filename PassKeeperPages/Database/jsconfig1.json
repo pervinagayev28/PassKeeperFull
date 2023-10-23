@@ -1,0 +1,86 @@
+[
+  {
+    "UserName": "user1",
+    "Password": "password1",
+    "Accounts": [
+      {
+        "SocialNetworkName": "Instagram",
+        "LogIn": "user1_insta",
+        "Password": "insta_pass",
+        "Kategoriya": "Social"
+      }
+    ]
+  },
+  {
+    "UserName": "user2",
+    "Password": "password2",
+    "Accounts": [
+      {
+        "SocialNetworkName": "LinkedIn",
+        "LogIn": "user2_linked",
+        "Password": "linked_pass",
+        "Kategoriya": "Professional"
+      }
+    ]
+  },
+  {
+    "UserName": "user3",
+    "Password": "password3",
+    "Accounts": [
+      {
+        "SocialNetworkName": "Twitter",
+        "LogIn": "user3_twitter",
+        "Password": "twitter_pass",
+        "Kategoriya": "Social"
+      },
+      {
+        "SocialNetworkName": "GitHub",
+        "LogIn": "user3_github",
+        "Password": "github_pass",
+        "Kategoriya": "Development"
+      }
+    ]
+  },
+  {
+    "UserName": "user4",
+    "Password": "password4",
+    "Accounts": [
+      {
+        "SocialNetworkName": "Snapchat",
+        "LogIn": "user4_snap",
+        "Password": "snap_pass",
+        "Kategoriya": "Social"
+      },
+      {
+        "SocialNetworkName": "Reddit",
+        "LogIn": "user4_reddit",
+        "Password": "reddit_pass",
+        "Kategoriya": "Discussion"
+      }
+    ]
+  },
+  {
+    "UserName": "user5",
+    "Password": "password5",
+    "Accounts": [
+      {
+        "SocialNetworkName": "Facebook",
+        "LogIn": "user5_fb",
+        "Password": "fb_pass",
+        "Kategoriya": "Social"
+      },
+      {
+        "SocialNetworkName": "Google",
+        "LogIn": "user5_google",
+        "Password": "google_pass",
+        "Kategoriya": "Search"
+      },
+      {
+        "SocialNetworkName": "Amazon",
+        "LogIn": "user5_amazon",
+        "Password": "amazon_pass",
+        "Kategoriya": "Shopping"
+      }
+    ]
+  }
+]

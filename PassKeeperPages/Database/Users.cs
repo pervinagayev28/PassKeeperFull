@@ -1,0 +1,26 @@
+﻿using PassKeeperPages.UserClass;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+
+namespace PassKeeperPages.Database
+{
+    public static class Users
+    {
+        static public User? user { get; set; }
+        public static List<User>? users { get; set; }
+
+        public static void LoadDatabase() =>
+                    users = JsonSerializer.Deserialize<List<User>>(File.ReadAllText("C:\\Users\\user\\OneDrive\\Desktop\\PassKeeperPages\\PassKeeperPages\\Database\\jsconfig1.json"));
+        public static void UpdateDatabase()
+        {
+            File.WriteAllText("C:\\Users\\user\\OneDrive\\Desktop\\PassKeeperPages\\PassKeeperPages\\Database\\jsconfig1.json",
+                JsonSerializer.Serialize(users, new JsonSerializerOptions() { WriteIndented = true }));
+        }
+
+    }
+}
