@@ -14,29 +14,29 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
-            <Image HorizontalAlignment="Center" Margin="0,20,0,0" Height="70" Width="220" Source="C:\Users\user\OneDrive\Desktop\Wpf_PassKeeper\Wpf_PassKeeper\Images\Screenshot 2023-10-11 165852.png"/>
-            <Image HorizontalAlignment="Center" Margin="0,31,0,0"  Height="70" Width="100" Source="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"/>
-            <Label Content="Edit" HorizontalContentAlignment="Center" BorderThickness="0" Foreground="blue"/>
+            <Image HorizontalAlignment="Center" Margin="0,20,0,0" Height="70" Width="220" Source="\MyImages\Screenshot 2023-10-11 165852.png"/>
+            <Image HorizontalAlignment="Center" Margin="0,31,0,0"  Height="70" Width="100" Source="{Binding user.Image}"/>
+            <Button Content="Edit" HorizontalContentAlignment="Center" BorderThickness="0" Background="#F0F0F0" Width="25" Foreground="blue" Click="edit_click"/>
             </StackPanel>
         <StackPanel Margin="0,20,0,0" Grid.Row="1">
             <Label  Content="First name" Style="{DynamicResource LandingProfileLabelStyle}"/>
             <StackPanel Margin="5,5,0,0"  Orientation="Horizontal">
-                <TextBox  BorderThickness="0" Padding="10,3,0,0" Foreground="#203C85" Width="250" Text="Tunar" Height="30" FontWeight="Bold" FontSize="15" Background="White" />
+                <TextBox  BorderThickness="0" Padding="10,3,0,0" Foreground="#203C85" Width="250" Text="{Binding user.UserName}" Height="30" FontWeight="Bold" FontSize="15" Background="White" />
                 <Button Content="change" Width="70" Background="#FFFFFF" Margin="10,0,5,0" BorderThickness="0"/>
             </StackPanel>
             <Label Content="Last name" Style="{DynamicResource LandingProfileLabelStyle}"/>
             <StackPanel Margin="5,5,0,0" Orientation="Horizontal">
-                <TextBox  BorderThickness="0" Padding="10,3,0,0" Foreground="#203C85" Width="250" Text="Abuzar" Height="30" FontWeight="Bold" FontSize="15" Background="White" />
+                <TextBox  BorderThickness="0" Padding="10,3,0,0" Foreground="#203C85" Width="250" Text="{Binding user.LastName}" Height="30" FontWeight="Bold" FontSize="15" Background="White" />
                 <Button Content="change" Width="70" Background="#FFFFFF" Margin="10,0,5,0" BorderThickness="0"/>
             </StackPanel>
             <Label Content="Password" Style="{DynamicResource LandingProfileLabelStyle}"/>
             <StackPanel Margin="5,5,0,0" Orientation="Horizontal">
-                <TextBox  BorderThickness="0" Padding="10,3,0,0" Foreground="#203C85" Width="250" Text="*************" VerticalContentAlignment="Center" Height="30" FontWeight="Bold" FontSize="15" Background="White"/>
+                <TextBox  BorderThickness="0" Padding="10,3,0,0" Foreground="#203C85" Width="250" Text="{Binding user.Password}" VerticalContentAlignment="Center" Height="30" FontWeight="Bold" FontSize="15" Background="White"/>
                 <Button Content="change" Width="70" Background="#FFFFFF" Margin="10,0,5,0" BorderThickness="0"/>
             </StackPanel>
             <Label Content="Mail" Style="{DynamicResource LandingProfileLabelStyle}"/>
             <StackPanel Margin="5,5,0,0" Orientation="Horizontal">
-                <TextBox  BorderThickness="0" Padding="10,3,0,0" Foreground="#203C85" Width="250" Text="Tunar@gmail.com" Height="30" FontWeight="Bold" FontSize="15" Background="White" />
+                <TextBox  BorderThickness="0" Padding="10,3,0,0" Foreground="#203C85" Width="250" Text="{Binding user.Mail}" Height="30" FontWeight="Bold" FontSize="15" Background="White" />
                 <Button Content="change" Width="70" Background="#FFFFFF" Margin="10,0,5,0" BorderThickness="0"/>
             </StackPanel>
         </StackPanel>

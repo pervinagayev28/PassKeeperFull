@@ -27,7 +27,7 @@ namespace PassKeeperPages.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SuccsessedEntry());
+            NavigationService.Navigate(ManagmentPages.Pages.SuccsessedEntry = new());
         }
     }
 }

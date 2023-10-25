@@ -15,10 +15,10 @@ namespace PassKeeperPages.Database
         public static List<User>? users { get; set; }
 
         public static void LoadDatabase() =>
-                    users = JsonSerializer.Deserialize<List<User>>(File.ReadAllText("C:\\Users\\user\\OneDrive\\Desktop\\PassKeeperPages\\PassKeeperPages\\Database\\jsconfig1.json"));
+                    users = JsonSerializer.Deserialize<List<User>>(File.ReadAllText("Database\\jsconfig1.json"));
         public static void UpdateDatabase()
         {
-            File.WriteAllText("C:\\Users\\user\\OneDrive\\Desktop\\PassKeeperPages\\PassKeeperPages\\Database\\jsconfig1.json",
+            File.WriteAllText("Database/jsconfig1.json",
                 JsonSerializer.Serialize(users, new JsonSerializerOptions() { WriteIndented = true }));
         }
 

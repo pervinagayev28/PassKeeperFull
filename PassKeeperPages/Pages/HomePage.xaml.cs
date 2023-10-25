@@ -27,12 +27,12 @@ namespace PassKeeperPages.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SignIn());
+            NavigationService.Navigate(ManagmentPages.Pages.SignIn = new());
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Register());
+            NavigationService.Navigate(ManagmentPages.Pages.Register = new());
         }
     }
 }

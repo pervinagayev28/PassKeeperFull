@@ -4,8 +4,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PassKeeperPages.Pages"
-       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      mc:Ignorable="d" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+    mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="350"
       Title="Landing1">
 
@@ -21,7 +21,7 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" HorizontalAlignment="Center"  Height="70" Width="100" Source="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" MouseDown="profImage_click"/>
+            <Image  Grid.Column="0" HorizontalAlignment="Center"  Height="70" Width="100" Source="{Binding UserImage}" MouseDown="profImage_click" Margin="10,14,0,6"/>
             <Image Grid.Column="1" HorizontalAlignment="Right" Margin="0,20,0,0" Height="70" Width="220" Source="C:\Users\user\OneDrive\Desktop\Wpf_PassKeeper\Wpf_PassKeeper\Images\Screenshot 2023-10-11 165852.png"/>
         </Grid>
         <Grid  Grid.Row="1" Margin="20,10,20,0" Background="#FFFFFF">
@@ -35,15 +35,12 @@
 
         <Grid  Width="300"  Margin="0,30,0,0" Grid.Row="2">
             <ListView x:Name="listview" BorderThickness="0" ItemsSource="{Binding accounts}" Height="350" Background="#F0F0F0">
-                <ListView.ItemsPanel >
-                    <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Vertical"/>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
+               
                 <ListView.ItemTemplate>
                     <DataTemplate x:Name="datatemplate">
 
-                        <Canvas  Margin="0,0,0,50" Name="canvas">
+                        <Canvas  Margin="0,0,0,50" Name="canvas" >
+                           
 
                             <ComboBox Name="CboxFacebook" HorizontalContentAlignment="Stretch" Height="48" Width="290" DropDownClosed="combobox_dropdownclosed_click" DropDownOpened="combobox_dropdownopened_click">
                                 <ComboBoxItem>

@@ -1,14 +1,41 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="Database\jsconfig1.json" />
+		<None Remove="MyImages\3135715.png" />
+		<None Remove="MyImages\Screenshot 2023-10-11 165852.png" />
+		<None Remove="MyImages\**" />
+		<Content Include="MyImages\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+
+		<Content Include="Database\jsconfig1.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+
+		<Content Update="MyImages\**">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<BuildAction>Content</BuildAction>
+		</Content>
+		<Content Include="MyImages\3135715.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="MyImages\Screenshot 2023-10-11 165852.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+	</ItemGroup>
+
 
 </Project>

@@ -42,7 +42,9 @@ namespace PassKeeperPages.Pages
             {
                 Users.user = Users.users.FirstOrDefault(u => u.UserName == textbox_name.Text.ToString() &&
                 u.Password == textbox_password.Text.ToString());
-                NavigationService.Navigate(new Landing1());
+                if (ManagmentPages.Pages.Landing1 == null)
+                    ManagmentPages.Pages.Landing1 = new();
+                NavigationService.Navigate(ManagmentPages.Pages.Landing1 = new());
             }
             catch (Exception)
             {

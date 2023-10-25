@@ -10,7 +10,7 @@
 
     <!--<Grid>-->
         <StackPanel Background="#F0F0F0" Margin="0,0,0,0">
-            <Image Height="41" Width="212" Margin="0,127,0,0" Source="C:\Users\user\OneDrive\Desktop\Wpf_PassKeeper\Wpf_PassKeeper\Images\Screenshot 2023-10-11 165852.png"/>
+            <Image Height="41" Width="212" Margin="0,127,0,0" Source="\MyImages\Screenshot 2023-10-11 165852.png"/>
             <Button  Content="Sign in"  Margin="0,93,0,0" Style="{DynamicResource button_style}" Click="Button_Click"/>
             <Button  Content="Register"  Margin="0,25,0,0" Style="{DynamicResource button_style}" Click="Button_Click_1"/>
             <Label Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="14" Width="173" Margin="0,270,0,14" FontSize="12" BorderThickness="0,0,0,0" Foreground="#000000" Content="a product by Product Design LLC" Background="#F0F0F0"  />

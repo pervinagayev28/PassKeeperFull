@@ -27,9 +27,11 @@ namespace PassKeeperPages.Pages
 
 
         public ObservableCollection<Account> accounts { get; set; }
+        public string ?UserImage { get; set; }
         public Landing1()
         {
             InitializeComponent();
+            UserImage = Users.user.Image ?? @"\MyImages\3135715.png";
             accounts = new(Users.user.Accounts);
             DataContext = this;
         }
@@ -50,7 +52,8 @@ namespace PassKeeperPages.Pages
 
         private void profImage_click(object sender, MouseButtonEventArgs e)
         {
-            NavigationService.Navigate(new LandingProfile());
+           
+            NavigationService.Navigate(ManagmentPages.Pages.LandingProfile = new());
         }
 
         private void btn_trash_click(object sender, RoutedEventArgs e)
@@ -64,12 +67,14 @@ namespace PassKeeperPages.Pages
         private void btn_edit_click(object sender, RoutedEventArgs e)
         {
             LandingEdit.account = (((Button)sender).DataContext) as Account;
-            NavigationService.Navigate(new LandingEdit());
+          
+            NavigationService.Navigate(ManagmentPages.Pages.LandingEdit = new());
         }
 
         private void btn_add_click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new LandingAdd());
+           
+            NavigationService.Navigate(ManagmentPages.Pages.LandingAdd = new());
         }
     }
 }

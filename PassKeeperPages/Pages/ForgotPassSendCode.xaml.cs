@@ -27,7 +27,8 @@ namespace PassKeeperPages.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ForgotPassActivateCode());
+           
+            NavigationService.Navigate(ManagmentPages.Pages.ForgotPassActivateCode = new());
         }
     }
 }

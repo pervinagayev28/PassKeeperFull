@@ -48,3 +48,7 @@ C:\Users\user\OneDrive\Desktop\PassKeeperPages\PassKeeperPages\obj\Debug\net6.0-
 C:\Users\user\OneDrive\Desktop\PassKeeperPages\PassKeeperPages\obj\Debug\net6.0-windows\Pages\LandingEdit.baml
 C:\Users\user\OneDrive\Desktop\PassKeeperPages\PassKeeperPages\obj\Debug\net6.0-windows\Pages\LandingAdd.g.cs
 C:\Users\user\OneDrive\Desktop\PassKeeperPages\PassKeeperPages\obj\Debug\net6.0-windows\Pages\LandingAdd.baml
+C:\Users\user\OneDrive\Desktop\PassKeeperPages\PassKeeperPages\bin\Debug\net6.0-windows\Database\jsconfig1.json
+C:\Users\user\OneDrive\Desktop\PassKeeperPages\PassKeeperPages\bin\Debug\net6.0-windows\MyImages\3135715.png
+C:\Users\user\OneDrive\Desktop\PassKeeperPages\PassKeeperPages\bin\Debug\net6.0-windows\MyImages\Screenshot 2023-10-11 165852.png
+C:\Users\user\OneDrive\Desktop\PassKeeperPages\PassKeeperPages\obj\Debug\net6.0-windows\PassKeeperPages_Content.g.cs

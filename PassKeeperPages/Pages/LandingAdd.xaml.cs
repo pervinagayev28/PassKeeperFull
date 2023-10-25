@@ -17,12 +17,10 @@ using System.Windows.Shapes;
 
 namespace PassKeeperPages.Pages
 {
-    /// <summary>
-    /// Interaction logic for LandingAdd.xaml
-    /// </summary>
+   
     public partial class LandingAdd : Page
     {
-        public Account? account { get; set; }
+        public Account? account { get; set; } = new();
         public LandingAdd()
         {
             InitializeComponent();
@@ -31,6 +29,7 @@ namespace PassKeeperPages.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            ManagmentPages.Pages.Landing1.accounts.Add(account);
             Users.user.Accounts.Add(account);
             Users.UpdateDatabase();
         }

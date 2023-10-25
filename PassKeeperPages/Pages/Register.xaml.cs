@@ -27,7 +27,7 @@ namespace PassKeeperPages.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new RegisterPassword());
+            NavigationService.Navigate(ManagmentPages.Pages.RegisterPassword = new()    );
         }
     }
 }
