@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PassKeeperPages.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,10 +24,13 @@ namespace PassKeeperPages.Pages
         public RegisterPassword()
         {
             InitializeComponent();
+            DataContext = ManagmentPages.Pages.Register;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Users.users!.Add(Register.newUser);
+            Users.UpdateDatabase();
             NavigationService.Navigate(ManagmentPages.Pages.SuccsessedEntry = new());
         }
     }

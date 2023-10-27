@@ -15,7 +15,12 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
             <Image HorizontalAlignment="Center" Margin="0,20,0,0" Height="70" Width="220" Source="\MyImages\Screenshot 2023-10-11 165852.png"/>
-            <Image HorizontalAlignment="Center" Margin="0,31,0,0"  Height="70" Width="100" Source="{Binding user.Image}"/>
+            <Border HorizontalAlignment="Center" Margin="0,31,0,0"  Height="80" Width="80" CornerRadius="40">
+                <Border.Background>
+                    <ImageBrush ImageSource="{Binding user.Image}"/>
+                </Border.Background>
+            </Border>
+    
             <Button Content="Edit" HorizontalContentAlignment="Center" BorderThickness="0" Background="#F0F0F0" Width="25" Foreground="blue" Click="edit_click"/>
             </StackPanel>
         <StackPanel Margin="0,20,0,0" Grid.Row="1">

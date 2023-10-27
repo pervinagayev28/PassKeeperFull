@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("myimages/3135715.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("myimages/download%20(1).jpeg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("myimages/screenshot%202023-10-11%20165852.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/jsconfig1.json")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("myimages/3135715.png")]

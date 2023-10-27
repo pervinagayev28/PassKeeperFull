@@ -11,14 +11,14 @@ namespace PassKeeperPages.Database
 {
     public static class Users
     {
-        static public User? user { get; set; }
+        static public User? user { get; set; } = new();
         public static List<User>? users { get; set; }
 
         public static void LoadDatabase() =>
-                    users = JsonSerializer.Deserialize<List<User>>(File.ReadAllText("Database\\jsconfig1.json"));
+                    users = JsonSerializer.Deserialize<List<User>>(File.ReadAllText("..\\..\\..\\Database\\jsconfig1.json"));
         public static void UpdateDatabase()
         {
-            File.WriteAllText("Database/jsconfig1.json",
+            File.WriteAllText("..\\..\\..\\Database/jsconfig1.json",
                 JsonSerializer.Serialize(users, new JsonSerializerOptions() { WriteIndented = true }));
         }
 

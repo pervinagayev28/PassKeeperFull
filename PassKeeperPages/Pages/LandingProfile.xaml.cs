@@ -24,17 +24,9 @@ namespace PassKeeperPages.Pages
 {
     public partial class LandingProfile : Page, INotifyPropertyChanged
     {
-        private User _user = new();
 
-        public User user
-        {
-            get { return _user; }
-            set
-            {
-                _user = value;
-                //OnPropertyChanged();
-            }
-        }
+        public User? user { get; set; } = new();
+
 
         public LandingProfile()
         {
@@ -45,6 +37,10 @@ namespace PassKeeperPages.Pages
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
+        public string foo(string name)
+        {
+            return @"\asd\";
+        }
         public void OnPropertyChanged([CallerMemberName] string proName = null)
         {
             PropertyChanged.Invoke(this, new PropertyChangedEventArgs(proName));
@@ -54,19 +50,17 @@ namespace PassKeeperPages.Pages
             OpenFileDialog fileDialog = new OpenFileDialog();
             if (fileDialog.ShowDialog() == true)
             {
-                string targetDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "MyImages");
-                string fileName = Path.GetFileName(fileDialog.FileName);
-                string destinationPath = Path.Combine(targetDirectory, fileName);
+                if (!File.Exists($"..\\..\\..\\MyImages\\{Path.GetFileName(fileDialog.FileName)}"))
+                    File.Copy(fileDialog.FileName, $"..\\..\\..\\MyImages\\{Path.GetFileName(fileDialog.FileName)}");
 
-                FileInfo fileInfo = new FileInfo(fileDialog.FileName);
-                fileInfo.CopyTo(destinationPath, true);
+                var update = Users.users.FirstOrDefault(u => u.UserName == user.UserName && u.Password == user.Password);
+                string filename = Path.GetFileName(fileDialog.FileName);
+                user.Image = $@"\MyImages\{Path.GetFileName(fileDialog.FileName)}";
+                update = user;
+                Users.UpdateDatabase();
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(nameof(user)));
             }
 
         }
     }
 }
-
-/*  var update = Users.users.FirstOrDefault(u => u.UserName == user.UserName && u.Password == user.Password);
-  update = user;
-  Users.UpdateDatabase();*/

@@ -13,6 +13,10 @@ namespace PassKeeperPages.UserClass
         public string ?LastName { get; set; }
         public string ?Mail { get; set; }
         public string ?Image { get; set; }
-        public List<Account> ?Accounts { get; set; }
+        public List<Account>? Accounts { get; set; } = new();
+        public User()
+        {
+            Accounts = new List<Account>();
+        }
     }
 }

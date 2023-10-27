@@ -21,26 +21,63 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Image  Grid.Column="0" HorizontalAlignment="Center"  Height="70" Width="100" Source="{Binding UserImage}" MouseDown="profImage_click" Margin="10,14,0,6"/>
-            <Image Grid.Column="1" HorizontalAlignment="Right" Margin="0,20,0,0" Height="70" Width="220" Source="C:\Users\user\OneDrive\Desktop\Wpf_PassKeeper\Wpf_PassKeeper\Images\Screenshot 2023-10-11 165852.png"/>
+            <Border MouseDown="profImage_click" Margin="10,14,0,6" Grid.Column="0" HorizontalAlignment="Center"  Height="80" Width="80" CornerRadius="40">
+                <Border.Background>
+                    <ImageBrush ImageSource="{Binding UserImage}"/>
+                </Border.Background>
+            </Border>
+
+            <Image Grid.Column="1" HorizontalAlignment="Right" Margin="0,20,0,0" Height="70" Width="220" Source="\MyImages\Screenshot 2023-10-11 165852.png"/>
         </Grid>
         <Grid  Grid.Row="1" Margin="20,10,20,0" Background="#FFFFFF">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="12*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBox BorderThickness="0" Grid.Column="0" Text="search"  Width="370" Height="40" FontSize="20" Style="{DynamicResource SigIn_TextBox_style}"/>
+            <Canvas Grid.Column="0"  >
+                <TextBox TextChanged="serached" BorderThickness="0"   Width="370" Height="40" FontSize="20" x:Name="textbox_search"  Style="{DynamicResource SigIn_TextBox_style}"  />
+                <Label  Panel.ZIndex="1"   Content="search" FontSize="15"   VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="5,5,0,0">
+                    <Label.Style>
+                        <Style TargetType="Label">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                            <Setter Property="Background" Value="#FFFFFF"/>
+                            <Setter Property="BorderThickness" Value="0,0,0,0"/>
+                            <Setter Property="Foreground" Value="#C0C0C0"/>
+                            <Setter Property="FontSize" Value="32"/>
+                            <Setter Property="FontFamily" Value="Josefin Sans"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=textbox_search, Path=IsFocused}" Value="True">
+                                    
+                                    <Setter Property="Visibility" Value="Hidden"/>
+                                </DataTrigger>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding ElementName=textbox_search, Path=Text.Length}" Value="0" />
+                                        <Condition Binding="{Binding ElementName=textbox_search, Path=IsMouseOver}" Value="False" />
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter Property="Visibility" Value="Visible"  />
+                                </MultiDataTrigger>
+
+                            </Style.Triggers>
+                        </Style>
+                    </Label.Style>
+                </Label>
+            </Canvas>
+            <!--<TextBox BorderThickness="0" Grid.Column="0" Text="search"  Width="370" Height="40" FontSize="20" Style="{DynamicResource SigIn_TextBox_style}"/>-->
             <materialDesign:PackIcon BorderThickness="0" Width="20" Kind="search" Height="40" Grid.Column="1" Margin="0,0,5,0" HorizontalContentAlignment="Right"/>
         </Grid>
 
         <Grid  Width="300"  Margin="0,30,0,0" Grid.Row="2">
             <ListView x:Name="listview" BorderThickness="0" ItemsSource="{Binding accounts}" Height="350" Background="#F0F0F0">
-               
+
                 <ListView.ItemTemplate>
                     <DataTemplate x:Name="datatemplate">
 
                         <Canvas  Margin="0,0,0,50" Name="canvas" >
-                           
+
 
                             <ComboBox Name="CboxFacebook" HorizontalContentAlignment="Stretch" Height="48" Width="290" DropDownClosed="combobox_dropdownclosed_click" DropDownOpened="combobox_dropdownopened_click">
                                 <ComboBoxItem>
